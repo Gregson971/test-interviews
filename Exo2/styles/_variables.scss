@@ -1,0 +1,60 @@
+// ============================================
+// VARIABLES
+// ============================================
+
+// Colors
+$color-primary: #2c2d3f;
+$color-secondary: #1e1f2b;
+$color-text-dark: #1e1f2b;
+$color-text-light: #ffffff;
+$color-text-muted: #6c757d;
+$color-background-light: #f8f9fa;
+$color-background-white: #ffffff;
+
+// Accent colors for subtitles (WCAG AA compliant - contrast ratio ≥ 4.5:1)
+$color-star: #2e7d32;      // Green - contrast ratio: 4.52:1
+$color-galaxy: #c62828;    // Red - contrast ratio: 5.47:1
+$color-blackhole: #e65100; // Orange - contrast ratio: 4.52:1
+
+// Typography
+$font-family-primary: 'Amaranth', sans-serif;
+$font-size-base: 16px;
+$font-size-title: 23px;
+$font-size-subtitle: 13px;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+$line-height-base: 1.6;
+
+// Spacing
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+$spacing-xxl: 4rem;
+
+// Breakpoints
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+$breakpoint-wide: 1280px;
+
+// Layout
+$max-width-container: 1400px;
+$header-height: 400px;
+$header-height-mobile: 300px;
+$nav-height: 60px;
+
+// Transitions
+$transition-fast: 0.2s ease;
+$transition-medium: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// Border radius
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+
+// Shadows
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+$shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);

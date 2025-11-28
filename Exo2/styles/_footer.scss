@@ -1,0 +1,104 @@
+// ============================================
+// FOOTER COMPONENT
+// ============================================
+
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.footer {
+  background-color: $color-secondary;
+  color: $color-text-light;
+  padding: $spacing-xxl 0 $spacing-md;
+
+  &__container {
+    @include container;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: $spacing-xl;
+    margin-bottom: $spacing-xl;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: $spacing-lg;
+    }
+  }
+
+  &__column {
+    &--wide {
+      @include desktop {
+        grid-column: span 1;
+      }
+    }
+  }
+
+  &__title {
+    font-size: $font-size-title;
+    font-weight: $font-weight-bold;
+    margin-bottom: $spacing-md;
+    color: $color-text-light;
+  }
+
+  &__list {
+    @include flex-column;
+    gap: $spacing-sm;
+  }
+
+  &__link {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: $font-size-base;
+    @include transition(color, $transition-fast);
+
+    &:hover {
+      color: $color-text-light;
+      opacity: 1;
+    }
+  }
+
+  &__text {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    margin-bottom: $spacing-md;
+  }
+
+  &__social {
+    display: flex;
+    gap: $spacing-md;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__social-link {
+    @include flex-center;
+    width: 40px;
+    height: 40px;
+    margin-bottom: $spacing-md;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: $color-text-light;
+    @include transition(all, $transition-fast);
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-4px);
+      opacity: 1;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__bottom {
+    @include container;
+    padding-top: $spacing-lg;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+  }
+
+  &__copyright {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+  }
+}

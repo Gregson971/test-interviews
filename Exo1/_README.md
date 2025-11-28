@@ -6,7 +6,7 @@ Simplifier / refactoriser la fonction dans le fichier pricing.js
 
 ## Synthèse des étapes
 
-**Etape 1** : Exécuter le fichier pricing.js avec la commande `node pricing.js`
+**Etape 1** : Exécuter le fichier pricing.js avec la commande `node pricing.js`  
 En sortie, on obtient le message d'erreur suivant :
 
 ```bash

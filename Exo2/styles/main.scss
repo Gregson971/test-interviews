@@ -1,0 +1,29 @@
+// ============================================
+// MAIN STYLESHEET
+// Using BEM methodology for CSS class naming
+// ============================================
+
+// 1. Variables & Configuration
+@use 'variables' as *;
+
+// 2. Mixins & Functions
+@use 'mixins' as *;
+
+// 3. Base & Reset
+@use 'base';
+
+// 4. Components (following BEM naming convention)
+@use 'header';
+@use 'nav';
+@use 'carousel';
+@use 'card';
+@use 'footer';
+
+// 5. Layout
+.main {
+  min-height: calc(100vh - #{$header-height} - #{$nav-height});
+
+  @include mobile {
+    min-height: calc(100vh - #{$header-height-mobile} - #{$nav-height});
+  }
+}

@@ -1,0 +1,107 @@
+// ============================================
+// MIXINS
+// ============================================
+
+@use 'variables' as *;
+
+// Responsive breakpoints
+@mixin mobile {
+  @media (max-width: #{$breakpoint-tablet - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $breakpoint-tablet) and (max-width: #{$breakpoint-desktop - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin wide {
+  @media (min-width: $breakpoint-wide) {
+    @content;
+  }
+}
+
+// Flexbox utilities
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Typography
+@mixin heading {
+  font-family: $font-family-primary;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+}
+
+@mixin body-text {
+  font-family: $font-family-primary;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+}
+
+// Transitions
+@mixin transition($property: all, $duration: $transition-medium) {
+  transition: $property $duration;
+}
+
+// Hover effect
+@mixin hover-lift {
+  @include transition(transform);
+
+  &:hover {
+    transform: translateY(-4px) scale(1.02);
+  }
+}
+
+// Hide scrollbar
+@mixin hide-scrollbar {
+  scrollbar-width: none; // Firefox
+  -ms-overflow-style: none; // IE/Edge
+
+  &::-webkit-scrollbar {
+    display: none; // Chrome/Safari
+  }
+}
+
+// Container
+@mixin container {
+  width: 100%;
+  max-width: $max-width-container;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+
+  @include desktop {
+    padding: 0 $spacing-xl;
+  }
+}
+
+// Button reset
+@mixin button-reset {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}

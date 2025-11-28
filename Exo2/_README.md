@@ -29,7 +29,6 @@ Vous pouvez utiliser un préprocesseur CSS, pensez à bien envoyer les fichiers 
 
 - pied de page responsive
 
-
 # Indications
 
 ## Typographie
@@ -53,4 +52,73 @@ Vous pouvez utiliser un préprocesseur CSS, pensez à bien envoyer les fichiers 
 
 ### Images
 
-- possibilité d'utiliser des banques d'images comme https://source.unsplash.com/
+- possibilité d'utiliser des banques d'images comme https://unsplash.com/fr
+
+# Synthèse des étapes
+
+## Méthodologie utilisée
+
+- Utilisation de BEM pour la nomenclature des classes CSS
+- Utilisation de SASS pour la gestion des variables et des mixins
+- Utilisation de ES6 modules pour la gestion des imports et des exports
+- Utilisation de Intersection Observer pour le lazy loading des images
+
+## Optimisations appliquées
+
+### 1. Préchargement des ressources critiques (preload)
+
+### 2. Optimisation des fonts Google (font-display: swap)
+
+### 3. Préconnexion aux domaines externes (preconnect)
+
+### 4. Images en locale et optimisées (WebP)
+
+### 5. Attributs width/height sur images
+
+### 6. CSS minifié (SASS)
+
+### 7. JavaScript optimisé (ES6 modules)
+
+### 8. Lazy loading des images (Intersection Observer)
+
+## Optimisations supplémentaires à prévoir
+
+### 1. Service Worker pour cache (caching)
+
+### 2. CDN pour les assets (distribution géographique)
+
+## Score Lighthouse
+
+En mobile :
+![Lighthouse mobile](./docs/lighthouse-analyse-mobile.png)
+
+En desktop :
+![Lighthouse desktop](./docs/lighthouse-analyse-desktop.png)
+
+## Installation et utilisation
+
+### 1. Cloner le projet
+
+```bash
+cd Exo2
+```
+
+### 2. Compiler le SASS (optionnel si déjà compilé)
+
+```bash
+# Installer SASS si nécessaire
+npm install -g sass
+
+ # Compiler
+sass styles/main.scss styles/main.css
+
+ # Compiler en mode watch (auto-compilation)
+sass --watch styles/main.scss styles/main.css
+```
+
+### 3. Ouvrir dans le navigateur
+
+```bash
+python3 -m http.server 8000
+open http://localhost:8000
+```

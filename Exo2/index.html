@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The Galactic Center - Découvrez les merveilles de notre galaxie" />
+    <title>The Galactic Center</title>
+
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/images/photo-1506318137071-a8e063b4bec0.webp" as="image" type="image/webp" fetchpriority="high" />
+    <link rel="preload" href="styles/main.css" as="style" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&display=swap" as="style" />
+
+    <!-- Modulepreload for ES6 modules to avoid chaining -->
+    <link rel="modulepreload" href="scripts/main.js" />
+    <link rel="modulepreload" href="scripts/navigation.js" />
+    <link rel="modulepreload" href="scripts/carousel.js" />
+    <link rel="modulepreload" href="scripts/accessibility.js" />
+    <link rel="modulepreload" href="scripts/performance.js" />
+
+    <!-- Google Fonts - Amaranth with font-display: swap for faster rendering -->
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <!-- Header with hero image -->
+    <header class="header" role="banner">
+      <div class="header__content">
+        <h1 class="header__title">The Galactic Center</h1>
+      </div>
+    </header>
+
+    <!-- Sticky Navigation -->
+    <nav class="nav" role="navigation" aria-label="Navigation principale">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="#carrousel-1" class="nav__link nav__link--active">Carrousel</a>
+        </li>
+        <li class="nav__item">
+          <a href="#carrousel-2" class="nav__link">Carrousel 2</a>
+        </li>
+        <li class="nav__item">
+          <a href="#footer" class="nav__link">Footer</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Carrousel Section 1 -->
+      <section id="carrousel-1" class="carousel-section" aria-labelledby="carousel-1-title">
+        <h2 id="carousel-1-title" class="carousel-section__title">Carrousel - vignette simple</h2>
+
+        <div class="carousel">
+          <button class="carousel__btn carousel__btn--prev" aria-label="Élément précédent">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+
+          <div class="carousel__track-container">
+            <ul class="carousel__track" role="list">
+              <!-- Card 1 -->
+              <li class="carousel__slide">
+                <article class="card">
+                  <div class="card__image-wrapper">
+                    <picture>
+                      <source srcset="./assets/images/photo-1614642264762-d0a3b8bf3700.webp" type="image/webp" />
+                      <img src="./assets/images/photo-1614642264762-d0a3b8bf3700.jpeg" alt="Blue supergiant star" class="card__image" loading="lazy" width="400" height="600" />
+                    </picture>
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title">BLUE SUPERGIANT STAR</h3>
+                    <p class="card__subtitle card__subtitle--star">Star</p>
+                    <p class="card__description">
+                      A blue supergiant (BSG) is a hot, luminous star, often referred to as an OB supergiant. They have luminosity class I and spectral class B9 or earlier.
+                    </p>
+                    <a href="#" class="card__link">voir plus</a>
+                  </div>
+                </article>
+              </li>
+
+              <!-- Card 2 -->
+              <li class="carousel__slide">
+                <article class="card">
+                  <div class="card__image-wrapper">
+                    <picture>
+                      <source srcset="./assets/images/photo-1532693322450-2cb5c511067d.webp" type="image/webp" />
+                      <img src="./assets/images/photo-1532693322450-2cb5c511067d.jpeg" alt="Milky Way galaxy" class="card__image" loading="lazy" width="400" height="600" />
+                    </picture>
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title">MILKY WAY</h3>
+                    <p class="card__subtitle card__subtitle--galaxy">Galaxy</p>
+                    <p class="card__description">The Milky Way is the galaxy that contains our Solar System, with the name describing the galaxy's appearance from Earth.</p>
+                    <a href="#" class="card__link">voir plus</a>
+                  </div>
+                </article>
+              </li>
+
+              <!-- Card 3 -->
+              <li class="carousel__slide">
+                <article class="card">
+                  <div class="card__image-wrapper">
+                    <picture>
+                      <source srcset="./assets/images/photo-1462331940025-496dfbfc7564.webp" type="image/webp" />
+                      <img src="./assets/images/photo-1462331940025-496dfbfc7564.jpeg" alt="Supermassive black hole" class="card__image" loading="lazy" width="400" height="600" />
+                    </picture>
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title">SUPERMASSIVE BLACK HOLE</h3>
+                    <p class="card__subtitle card__subtitle--blackhole">Black hole</p>
+                    <p class="card__description">
+                      A supermassive black hole is the largest type of black hole, with mass on the order of millions to billions of times the mass of the Sun.
+                    </p>
+                    <a href="#" class="card__link">voir plus</a>
+                  </div>
+                </article>
+              </li>
+
+              <!-- Card 4 -->
+              <li class="carousel__slide">
+                <article class="card">
+                  <div class="card__image-wrapper">
+                    <picture>
+                      <source srcset="./assets/images/photo-1419242902214-272b3f66ee7a.webp" type="image/webp" />
+                      <img src="./assets/images/photo-1419242902214-272b3f66ee7a.jpeg" alt="Nebula" class="card__image" loading="lazy" width="400" height="600" />
+                    </picture>
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title">PLANETARY NEBULA</h3>
+                    <p class="card__subtitle card__subtitle--star">Nebula</p>
+                    <p class="card__description">
+                      A planetary nebula is a type of emission nebula consisting of an expanding, glowing shell of ionized gas ejected from red giant stars.
+                    </p>
+                    <a href="#" class="card__link">voir plus</a>
+                  </div>
+                </article>
+              </li>
+
+              <!-- Card 5 -->
+              <li class="carousel__slide">
+                <article class="card">
+                  <div class="card__image-wrapper">
+                    <picture>
+                      <source srcset="./assets/images/photo-1543722530-d2c3201371e7.webp" type="image/webp" />
+                      <img src="./assets/images/photo-1543722530-d2c3201371e7.jpeg" alt="Exoplanet" class="card__image" loading="lazy" width="400" height="600" />
+                    </picture>
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title">EXOPLANET</h3>
+                    <p class="card__subtitle card__subtitle--galaxy">Planet</p>
+                    <p class="card__description">An exoplanet is a planet outside the Solar System. The first possible evidence of an exoplanet was noted in 1917.</p>
+                    <a href="#" class="card__link">voir plus</a>
+                  </div>
+                </article>
+              </li>
+
+              <!-- Card 6 -->
+              <li class="carousel__slide">
+                <article class="card">
+                  <div class="card__image-wrapper">
+                    <picture>
+                      <source srcset="./assets/images/photo-1610296669228-602fa827fc1f.webp" type="image/webp" />
+                      <img src="./assets/images/photo-1610296669228-602fa827fc1f.jpeg" alt="Red dwarf star" class="card__image" loading="lazy" width="400" height="600" />
+                    </picture>
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title">RED DWARF STAR</h3>
+                    <p class="card__subtitle card__subtitle--blackhole">Star</p>
+                    <p class="card__description">A red dwarf is the smallest and coolest kind of star on the main sequence. Red dwarfs are by far the most common type of star.</p>
+                    <a href="#" class="card__link">voir plus</a>
+                  </div>
+                </article>
+              </li>
+            </ul>
+          </div>
+
+          <button class="carousel__btn carousel__btn--next" aria-label="Élément suivant">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <!-- Carrousel Section 2 -->
+      <section id="carrousel-2" class="carousel-section" aria-labelledby="carousel-2-title">
+        <h2 id="carousel-2-title" class="carousel-section__title">Carrousel - vignette simple</h2>
+
+        <div class="carousel">
+          <button class="carousel__btn carousel__btn--prev" aria-label="Élément précédent">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+
+          <div class="carousel__track-container">
+            <ul class="carousel__track" role="list">
+              <!-- Same cards as carousel 1 -->
+              <li class="carousel__slide">
+                <article class="card">
+                  <div class="card__image-wrapper">
+                    <picture>
+                      <source srcset="./assets/images/photo-1614642264762-d0a3b8bf3700.webp" type="image/webp" />
+                      <img src="./assets/images/photo-1614642264762-d0a3b8bf3700.jpeg" alt="Blue supergiant star" class="card__image" loading="lazy" width="400" height="600" />
+                    </picture>
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title">BLUE SUPERGIANT STAR</h3>
+                    <p class="card__subtitle card__subtitle--star">Star</p>
+                    <p class="card__description">
+                      A blue supergiant (BSG) is a hot, luminous star, often referred to as an OB supergiant. They have luminosity class I and spectral class B9 or earlier.
+                    </p>
+                    <a href="#" class="card__link">voir plus</a>
+                  </div>
+                </article>
+              </li>
+
+              <li class="carousel__slide">
+                <article class="card">
+                  <div class="card__image-wrapper">
+                    <picture>
+                      <source srcset="./assets/images/photo-1532693322450-2cb5c511067d.webp" type="image/webp" />
+                      <img src="./assets/images/photo-1532693322450-2cb5c511067d.jpeg" alt="Milky Way galaxy" class="card__image" loading="lazy" width="400" height="600" />
+                    </picture>
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title">MILKY WAY</h3>
+                    <p class="card__subtitle card__subtitle--galaxy">Galaxy</p>
+                    <p class="card__description">The Milky Way is the galaxy that contains our Solar System, with the name describing the galaxy's appearance from Earth.</p>
+                    <a href="#" class="card__link">voir plus</a>
+                  </div>
+                </article>
+              </li>
+
+              <li class="carousel__slide">
+                <article class="card">
+                  <div class="card__image-wrapper">
+                    <picture>
+                      <source srcset="./assets/images/photo-1462331940025-496dfbfc7564.webp" type="image/webp" />
+                      <img src="./assets/images/photo-1462331940025-496dfbfc7564.jpeg" alt="Supermassive black hole" class="card__image" loading="lazy" width="400" height="600" />
+                    </picture>
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title">SUPERMASSIVE BLACK HOLE</h3>
+                    <p class="card__subtitle card__subtitle--blackhole">Black hole</p>
+                    <p class="card__description">
+                      A supermassive black hole is the largest type of black hole, with mass on the order of millions to billions of times the mass of the Sun.
+                    </p>
+                    <a href="#" class="card__link">voir plus</a>
+                  </div>
+                </article>
+              </li>
+
+              <li class="carousel__slide">
+                <article class="card">
+                  <div class="card__image-wrapper">
+                    <picture>
+                      <source srcset="./assets/images/photo-1419242902214-272b3f66ee7a.webp" type="image/webp" />
+                      <img src="./assets/images/photo-1419242902214-272b3f66ee7a.jpeg" alt="Nebula" class="card__image" loading="lazy" width="400" height="600" />
+                    </picture>
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title">PLANETARY NEBULA</h3>
+                    <p class="card__subtitle card__subtitle--star">Nebula</p>
+                    <p class="card__description">
+                      A planetary nebula is a type of emission nebula consisting of an expanding, glowing shell of ionized gas ejected from red giant stars.
+                    </p>
+                    <a href="#" class="card__link">voir plus</a>
+                  </div>
+                </article>
+              </li>
+
+              <li class="carousel__slide">
+                <article class="card">
+                  <div class="card__image-wrapper">
+                    <picture>
+                      <source srcset="./assets/images/photo-1543722530-d2c3201371e7.webp" type="image/webp" />
+                      <img src="./assets/images/photo-1543722530-d2c3201371e7.jpeg" alt="Exoplanet" class="card__image" loading="lazy" width="400" height="600" />
+                    </picture>
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title">EXOPLANET</h3>
+                    <p class="card__subtitle card__subtitle--galaxy">Planet</p>
+                    <p class="card__description">An exoplanet is a planet outside the Solar System. The first possible evidence of an exoplanet was noted in 1917.</p>
+                    <a href="#" class="card__link">voir plus</a>
+                  </div>
+                </article>
+              </li>
+
+              <li class="carousel__slide">
+                <article class="card">
+                  <div class="card__image-wrapper">
+                    <picture>
+                      <source srcset="./assets/images/photo-1610296669228-602fa827fc1f.webp" type="image/webp" />
+                      <img src="./assets/images/photo-1610296669228-602fa827fc1f.jpeg" alt="Red dwarf star" class="card__image" loading="lazy" width="400" height="600" />
+                    </picture>
+                  </div>
+                  <div class="card__content">
+                    <h3 class="card__title">RED DWARF STAR</h3>
+                    <p class="card__subtitle card__subtitle--blackhole">Star</p>
+                    <p class="card__description">A red dwarf is the smallest and coolest kind of star on the main sequence. Red dwarfs are by far the most common type of star.</p>
+                    <a href="#" class="card__link">voir plus</a>
+                  </div>
+                </article>
+              </li>
+            </ul>
+          </div>
+
+          <button class="carousel__btn carousel__btn--next" aria-label="Élément suivant">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer" role="contentinfo">
+      <div class="footer__container">
+        <div class="footer__column">
+          <h3 class="footer__title">Services</h3>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">L'Empire</a></li>
+            <li><a href="#" class="footer__link">Stormtrooper</a></li>
+            <li><a href="#" class="footer__link">Premier Ordre</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h3 class="footer__title">About</h3>
+          <ul class="footer__list">
+            <li><a href="#" class="footer__link">Anciens Officiers Impériaux</a></li>
+            <li><a href="#" class="footer__link">Les journées portes ouvertes</a></li>
+            <li><a href="#" class="footer__link">L'empire recrute</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column footer__column--wide">
+          <h3 class="footer__title">The Galactic center</h3>
+          <p class="footer__text">
+            Plus de 30 ans après la bataille d'Endor, nous avons su consolider nos forces afin de retrouver notre gloire. Les membres de l'Alliance rebelle, devenus la « Résistance
+            » se risque à combattre l'Empire réunis sous la bannière du « Premier Ordre ».
+          </p>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__social">
+          <a href="#" class="footer__social-link" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+              />
+            </svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Twitter">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+              />
+            </svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Snapchat">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12.206.793c.99 0 4.347.276 5.93 3.821.529 1.193.403 3.219.299 4.847l-.003.06c-.012.18-.022.345-.03.51.075.045.203.09.401.09.3-.016.659-.12 1.033-.301.165-.088.344-.104.464-.104.182 0 .359.029.509.09.45.149.734.479.734.838.015.449-.39.839-1.213 1.168-.089.029-.209.075-.344.119-.45.135-1.139.36-1.333.81-.09.224-.061.524.12.868l.015.015c.06.136 1.526 3.475 4.791 4.014.255.044.435.27.42.509 0 .075-.015.149-.045.225-.24.569-1.273.988-3.146 1.271-.059.091-.12.375-.164.57-.029.179-.074.36-.134.553-.076.271-.27.405-.555.405h-.03c-.135 0-.313-.031-.538-.074-.36-.075-.765-.135-1.273-.135-.3 0-.599.015-.913.074-.6.104-1.123.464-1.723.884-.853.599-1.826 1.288-3.294 1.288-.06 0-.119-.015-.18-.015h-.149c-1.468 0-2.427-.675-3.279-1.288-.599-.42-1.107-.779-1.707-.884-.314-.045-.629-.074-.928-.074-.54 0-.958.06-1.273.135-.209.029-.405.059-.539.059-.374 0-.523-.224-.583-.42-.061-.192-.09-.389-.135-.567-.046-.181-.105-.494-.166-.57-1.918-.222-2.95-.642-3.189-1.226-.031-.063-.052-.15-.055-.225-.015-.243.165-.465.42-.509 3.264-.54 4.73-3.879 4.791-4.02l.016-.029c.18-.345.224-.645.119-.869-.195-.434-.884-.658-1.332-.809-.121-.029-.24-.074-.346-.119-1.107-.435-1.257-.93-1.197-1.273.09-.479.674-.793 1.168-.793.146 0 .27.029.383.074.42.194.789.3 1.104.3.234 0 .384-.06.465-.105l-.046-.569c-.098-1.626-.225-3.651.307-4.837C7.392 1.077 10.739.807 11.727.807l.419-.015h.06z"
+              />
+            </svg>
+          </a>
+          <a href="#" class="footer__social-link" aria-label="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+            </svg>
+          </a>
+        </div>
+        <p class="footer__copyright">The Galactic center © 2025</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="scripts/main.js"></script>
+  </body>
+</html>

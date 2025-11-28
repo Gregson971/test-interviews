@@ -1,0 +1,121 @@
+// ============================================
+// CAROUSEL COMPONENT
+// ============================================
+
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.carousel-section {
+  padding: $spacing-xxl 0;
+  background-color: $color-background-light;
+
+  &:nth-of-type(even) {
+    background-color: $color-background-white;
+  }
+
+  &__title {
+    @include container;
+    font-size: $font-size-title;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    margin-bottom: $spacing-xl;
+    color: $color-text-dark;
+  }
+}
+
+.carousel {
+  position: relative;
+  @include container;
+
+  &__track-container {
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__track {
+    display: flex;
+    gap: $spacing-md;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: $spacing-sm 0;
+    @include hide-scrollbar;
+
+    @include mobile {
+      gap: $spacing-sm;
+    }
+  }
+
+  &__slide {
+    flex: 0 0 auto;
+    width: 280px;
+
+    @include mobile {
+      width: 250px;
+    }
+
+    @include tablet {
+      width: 300px;
+    }
+
+    @include desktop {
+      width: 320px;
+    }
+  }
+
+  &__btn {
+    @include flex-center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: none;
+    border-radius: 50%;
+    box-shadow: $shadow-md;
+    cursor: pointer;
+    z-index: 10;
+    @include transition(all, $transition-fast);
+
+    @include mobile {
+      width: 40px;
+      height: 40px;
+    }
+
+    &:hover {
+      background-color: $color-primary;
+      color: $color-text-light;
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    &:active {
+      transform: translateY(-50%) scale(0.95);
+    }
+
+    &--prev {
+      left: 0;
+
+      @include mobile {
+        left: -4px;
+      }
+    }
+
+    &--next {
+      right: 0;
+
+      @include mobile {
+        right: -4px;
+      }
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+
+      @include mobile {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
