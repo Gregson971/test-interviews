@@ -22,7 +22,7 @@ function initLazyLoading() {
 
   const imageObserver = new IntersectionObserver(
     (entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const img = entry.target;
           loadImage(img);
@@ -32,13 +32,13 @@ function initLazyLoading() {
     },
     {
       // Start loading images 50px before they enter viewport
-      rootMargin: '50px'
+      rootMargin: '50px',
     }
   );
 
   // Observe all images with data-src attribute
   const lazyImages = document.querySelectorAll('img[data-src]');
-  lazyImages.forEach(img => {
+  lazyImages.forEach((img) => {
     imageObserver.observe(img);
   });
 }
