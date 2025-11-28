@@ -1,17 +1,21 @@
 // Simplify / Refactorize this function
 const calculateDiscount = (amount, type, years) => {
-  result = 0;
-  disc = years > 5 ? 5 / 100 : years / 100;
-  if (type === 1) {
-    result = amount * (1 - disc);
-  } else if (type === 2) {
-    result = amount - 0.1 * amount - disc * (amount - 0.1 * amount);
-  } else if (type === 3) {
-    result = 0.7 * amount - disc * (0.7 * amount);
-  } else if (type === 4) {
-    result = amount - 0.5 * amount - disc * (amount - 0.5 * amount);
-  }
-  return result;
+  // Calculate year-based discount (capped at 5%)
+  const yearDiscount = Math.min(years, 5) / 100;
+
+  // Define base discount rates by customer type
+  const baseDiscountRates = {
+    1: 0, // 0% base discount
+    2: 0.1, // 10% base discount
+    3: 0.3, // 30% base discount
+    4: 0.5, // 50% base discount
+  };
+
+  const baseDiscountRate = baseDiscountRates[type] || 0;
+
+  // Apply both discounts: final = amount × (1 - baseDiscount) × (1 - yearDiscount)
+  const amountAfterBaseDiscount = amount * (1 - baseDiscountRate);
+  return amountAfterBaseDiscount * (1 - yearDiscount);
 };
 
 // Export the function for use in tests
